@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NANDEZ SPORT | Supera tus límites, alcanza tu grandeza</title>
+<style>
+:root{--bg:#0a0a0a;--bg2:#141414;--card:#1a1a1a;--text:#fff;--muted:#b5b5b5;--red:#e10600;--red2:#ff3b30;--line:#2a2a2a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#fff;--bg2:#f3f3f3;--card:#fff;--text:#0a0a0a;--muted:#555;--line:#ddd}}
+:root[data-theme="dark"]{--bg:#0a0a0a;--bg2:#141414;--card:#1a1a1a;--text:#fff;--muted:#b5b5b5;--line:#2a2a2a}
+html{scroll-behavior:smooth;scroll-padding-top:calc(70px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:2px solid var(--red)}
+nav{display:flex;justify-content:space-between;align-items:center;height:64px;gap:12px}
+.logo{font-weight:900;font-size:1.4rem;letter-spacing:2px;font-style:italic}
+.logo span{color:var(--red)}
+nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0;font-size:.9rem;font-weight:600}
+nav ul a:hover{color:var(--red)}
+@media(max-width:700px){nav ul{display:none}}
+.btn{display:inline-block;background:var(--red);color:#fff;padding:14px 28px;font-weight:800;text-transform:uppercase;letter-spacing:1px;border-radius:4px;border:0;cursor:pointer;transition:.2s}
+.btn:hover{background:var(--red2);transform:translateY(-2px)}
+.btn.out{background:transparent;border:2px solid var(--red);color:var(--text)}
+.hero{background:linear-gradient(135deg,#000 0%,#1a0000 60%,#7a0000 100%);color:#fff;padding:110px 0 120px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;right:-120px;top:-80px;width:520px;height:520px;background:var(--red);opacity:.18;transform:skew(-20deg);}
+.hero .wrap{position:relative;z-index:1}
+.tag{color:var(--red2);font-weight:800;letter-spacing:3px;font-size:.8rem}
+h1{font-size:clamp(2.4rem,7vw,4.8rem);line-height:1.05;margin:12px 0 18px;font-weight:900;text-transform:uppercase;font-style:italic}
+h1 em{color:var(--red);font-style:italic}
+.hero p{max-width:540px;color:#ddd;font-size:1.1rem}
+.cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+section{padding:80px 0}
+.alt{background:var(--bg2)}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);text-transform:uppercase;margin:0 0 8px;font-weight:900}
+h2:after{content:"";display:block;width:70px;height:5px;background:var(--red);margin-top:10px}
+.sub{color:var(--muted);margin:14px 0 38px;max-width:620px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);padding:28px 24px;border-radius:6px;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 30px rgba(225,6,0,.25)}
+.ico{font-size:2.2rem}
+.card h3{margin:10px 0 6px;font-size:1.15rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;text-align:center}
+.stats b{display:block;font-size:2.6rem;color:var(--red);font-weight:900}
+.stats span{color:var(--muted);font-size:.9rem}
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:40px;align-items:center}
+.box{background:linear-gradient(135deg,#000,#7a0000);color:#fff;padding:40px;border-radius:8px;border-left:8px solid var(--red)}
+.box q{font-size:1.5rem;font-weight:800;font-style:italic;quotes:none;display:block}
+.list{list-style:none;padding:0;margin:20px 0 0}
+.list li{padding:8px 0 8px 30px;position:relative}
+.list li:before{content:"✔";position:absolute;left:0;color:var(--red);font-weight:900}
+form{display:grid;gap:14px}
+input,textarea,select{width:100%;padding:14px;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:4px;font:inherit}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--red)}
+#ok{display:none;color:var(--red2);font-weight:700}
+footer{background:#000;color:#bbb;text-align:center;padding:36px 20px;border-top:3px solid var(--red);font-size:.9rem}
+footer .logo{color:#fff;display:block;margin-bottom:6px}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav>
+<a href="#inicio" class="logo">NANDEZ<span>SPORT</span></a>
+<ul><li><a href="#productos">Productos</a></li><li><a href="#asesoria">Asesoría</a></li><li><a href="#nosotros">Nosotros</a></li><li><a href="#contacto">Contacto</a></li></ul>
+<a href="#contacto" class="btn" style="padding:10px 18px;font-size:.8rem">Cotiza ya</a>
+</nav></div></header>
+
+<div class="hero" id="inicio"><div class="wrap">
+<div class="tag">TU TIENDA DEPORTIVA</div>
+<h1>Supera tus <em>límites</em>,<br>alcanza tu <em>grandeza</em></h1>
+<p>Ropa deportiva, zapatillas, balones, accesorios y suplementos para que entrenes, juegues y vivas una vida activa.</p>
+<div class="cta"><a href="#productos" class="btn">Ver productos</a><a href="#asesoria" class="btn out">Pide asesoría</a></div>
+</div></div>
+
+<section id="productos"><div class="wrap">
+<h2>Nuestros productos</h2>
+<p class="sub">Todo lo que necesitas en un solo lugar, para la cancha, el gimnasio y el día a día.</p>
+<div class="grid">
+<div class="card"><div class="ico">👕</div><h3>Ropa deportiva</h3><p>Prendas cómodas y transpirables para entrenar con estilo.</p></div>
+<div class="card"><div class="ico">👟</div><h3>Zapatillas</h3><p>Running, entrenamiento y uso diario con el mejor agarre y soporte.</p></div>
+<div class="card"><div class="ico">⚽</div><h3>Balones de fútbol</h3><p>Para partidos, entrenamientos y torneos entre amigos.</p></div>
+<div class="card"><div class="ico">🏋️</div><h3>Accesorios de gimnasio</h3><p>Guantes, bandas, termos, cuerdas y más para tu rutina.</p></div>
+<div class="card"><div class="ico">💪</div><h3>Suplementos deportivos</h3><p>Apoyo nutricional para rendimiento y recuperación.</p></div>
+</div></div></section>
+
+<section class="alt" id="asesoria"><div class="wrap"><div class="split">
+<div>
+<h2>Asesoría personalizada</h2>
+<p class="sub" style="margin-bottom:0">No sabes qué elegir? Te ayudamos a encontrar el implemento ideal según tu deporte, nivel y presupuesto.</p>
+<ul class="list"><li>Recomendación de calzado según tu pisada y actividad</li><li>Selección de balones y accesorios para tu disciplina</li><li>Orientación sobre suplementos para tus objetivos</li><li>Atención cercana y sin compromiso</li></ul>
+<div class="cta"><a href="#contacto" class="btn">Quiero asesoría</a></div>
+</div>
+<div class="box"><q>“Supera tus límites, alcanza tu grandeza”</q><p style="margin:14px 0 0;color:#ddd">Nuestro lema es tu motivación diaria.</p></div>
+</div></div></section>
+
+<section id="nosotros"><div class="wrap">
+<h2>Un estilo de vida activo</h2>
+<p class="sub">En NANDEZ SPORT promovemos el deporte, la salud y el bienestar. Somos para jóvenes, deportistas, aficionados al fútbol y quienes entrenan en gimnasio.</p>
+<div class="stats">
+<div><b>100%</b><span>Pasión por el deporte</span></div>
+<div><b>5</b><span>Categorías de productos</span></div>
+<div><b>+</b><span>Asesoría en cada compra</span></div>
+<div><b>24/7</b><span>Motivación para ti</span></div>
+</div></div></section>
+
+<section class="alt" id="contacto"><div class="wrap" style="max-width:640px">
+<h2>Contáctanos</h2>
+<p class="sub">Escríbenos y te respondemos lo antes posible.</p>
+<form id="f">
+<input required placeholder="Tu nombre" aria-label="Nombre">
+<input required type="email" placeholder="Tu correo" aria-label="Correo">
+<select aria-label="Interés"><option>Ropa deportiva</option><option>Zapatillas</option><option>Balones de fútbol</option><option>Accesorios de gimnasio</option><option>Suplementos</option><option>Asesoría</option></select>
+<textarea rows="4" placeholder="Cuéntanos qué necesitas" aria-label="Mensaje"></textarea>
+<button class="btn" type="submit">Enviar mensaje</button>
+<div id="ok">¡Gracias! Pronto nos pondremos en contacto contigo.</div>
+</form></div></section>
+
+<footer><span class="logo">NANDEZ<span style="color:var(--red)">SPORT</span></span>Supera tus límites, alcanza tu grandeza<br>© 2026 NANDEZ SPORT. Todos los derechos reservados.</footer>
+<script>
+document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();document.getElementById('ok').style.display='block';this.reset()});
+</script>
+</body>
+</html>
